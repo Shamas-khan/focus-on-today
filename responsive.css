@@ -1,0 +1,8 @@
+@media (max-width: 768px) {
+  main > h1:first-child {
+    font-size: 2rem;
+  }
+  .app-container {
+    padding: 16px 32px;
+  }
+}
