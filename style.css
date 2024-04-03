@@ -5,7 +5,7 @@ body {
   padding: 0;
 }
 main {
-  padding-inline: 16px;
+  padding: 0 16px 32px 16px;
 }
 main > h1:first-child {
   font-size: 4rem;
@@ -78,20 +78,40 @@ main > h1:first-child span {
   padding: 0 22px;
   gap: 22px;
   background-color: #ffffff;
-  margin-bottom: 46px;
+  margin-bottom: 42px;
 }
 .custom-checkbox {
   width: 24px;
   height: 24px;
   border: 2px solid rgba(97, 72, 28, 0.3);
   border-radius: 50%;
+  flex-shrink: 0;
+  cursor: pointer;
 }
 .goal-input {
   font-family: inherit;
   border: none;
   outline: none;
   font-size: 16px;
+  width: 100%;
+  align-self: stretch;
 }
 .goal-input::placeholder {
   color: #d9d9d9;
+}
+.app-container q {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  color: #000000;
+  display: block;
+}
+.made-with {
+  margin-top: 64px;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 15px;
+  text-align: center;
+  color: #858585;
 }

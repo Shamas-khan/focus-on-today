@@ -5,4 +5,17 @@
   .app-container {
     padding: 16px 32px;
   }
+  .goal-container {
+    height: 64px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+  }
+  .custom-checkbox {
+    width: 20px;
+    height: 20px;
+  }
+  .made-with {
+    margin-top: 34px;
+    
+  }
 }
