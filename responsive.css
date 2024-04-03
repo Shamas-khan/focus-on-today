@@ -1,6 +1,6 @@
 @media (max-width: 768px) {
   main > h1:first-child {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .app-container {
     padding: 16px 32px;
@@ -9,6 +9,8 @@
     height: 64px;
     margin-bottom: 24px;
     border-radius: 12px;
+    gap: 12px;
+    padding: 18px;
   }
   .custom-checkbox {
     width: 20px;
@@ -16,6 +18,11 @@
   }
   .made-with {
     margin-top: 34px;
-    
+  }
+  .goal-input::placeholder {
+    font-size: 12px;
+  }
+  .progress-value {
+    font-size: 0.4rem;
   }
 }
