@@ -9,7 +9,6 @@ checkBoxList.forEach((checkBox) => {
     const allGoalsAdded = [...inputFields].every((input) => input.value);
 
     if (allGoalsAdded) {
-      console.log(allGoalsAdded);
       checkBox.parentElement.classList.toggle("completed");
     } else {
       progressBar.classList.add("show-err");
