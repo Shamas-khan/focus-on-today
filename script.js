@@ -11,7 +11,7 @@ const allQuotes = [
   "Raise the bar by completing your goals!",
   "Well begun is half done!",
   "Just a step away, keep going!",
-  "Whoa! You just completed all the goals, time for chill :D",
+  "Whoa! You just completed all the goals, time for chill",
 ];
 
 // check if localStorage have data
@@ -23,7 +23,9 @@ let completedGoalsCount = Object.values(allGoals).filter(
 ).length;
 
 // progress value and text
-progressValue.style.width = `${(completedGoalsCount / 3) * 100}%`;
+progressValue.style.width = `${
+  (completedGoalsCount / inputFields.length) * 100
+}%`;
 progressValue.firstElementChild.innerText = `${completedGoalsCount}/${inputFields.length} completed`;
 
 progressLabel.innerText = allQuotes[completedGoalsCount];
@@ -41,7 +43,9 @@ checkBoxList.forEach((checkBox) => {
       completedGoalsCount = Object.values(allGoals).filter(
         (goal) => goal.completed
       ).length;
-      progressValue.style.width = `${(completedGoalsCount / 3) * 100}%`;
+      progressValue.style.width = `${
+        (completedGoalsCount / inputFields.length) * 100
+      }%`;
       progressValue.firstElementChild.innerText = `${completedGoalsCount}/${inputFields.length} completed`;
       progressLabel.innerText = allQuotes[completedGoalsCount];
 
@@ -58,9 +62,8 @@ inputFields.forEach((input) => {
   if (allGoals[input.id]) {
     input.value = allGoals[input.id].name;
 
-    if (allGoals[input.id].completed) {
+    if (allGoals[input.id].completed)
       input.parentElement.classList.add("completed");
-    }
   }
 
   input.addEventListener("focus", () => {
