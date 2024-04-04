@@ -3,6 +3,16 @@ const inputFields = document.querySelectorAll(".goal-input");
 const progressBar = document.querySelector(".progress-bar");
 const progressValue = document.querySelector(".progress-value");
 const errorLabel = document.querySelector(".error-label");
+const progressLabel = document.querySelector(".label");
+
+// / quotes for label
+
+const allQuotes = [
+  "Raise the bar by completing your goals!",
+  "Well begun is half done!",
+  "Just a step away, keep going!",
+  "Whoa! You just completed all the goals, time for chill :D",
+];
 
 // check if localStorage have data
 let allGoals = JSON.parse(localStorage.getItem("allGoal")) || {};
@@ -15,6 +25,8 @@ let completedGoalsCount = Object.values(allGoals).filter(
 // progress value and text
 progressValue.style.width = `${(completedGoalsCount / 3) * 100}%`;
 progressValue.firstElementChild.innerText = `${completedGoalsCount}/${inputFields.length} completed`;
+
+progressLabel.innerText = allQuotes[completedGoalsCount];
 
 // check box functionality
 checkBoxList.forEach((checkBox) => {
@@ -31,6 +43,8 @@ checkBoxList.forEach((checkBox) => {
       ).length;
       progressValue.style.width = `${(completedGoalsCount / 3) * 100}%`;
       progressValue.firstElementChild.innerText = `${completedGoalsCount}/${inputFields.length} completed`;
+      progressLabel.innerText = allQuotes[completedGoalsCount];
+
       localStorage.setItem("allGoal", JSON.stringify(allGoals));
     } else {
       progressBar.classList.add("show-err");
