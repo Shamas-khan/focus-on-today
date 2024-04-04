@@ -66,7 +66,9 @@ main > h1:first-child span {
   justify-content: center;
   overflow: hidden;
   transition: width 0.2s ease-in-out;
+  white-space: nowrap;
 }
+
 .err-label {
   font-size: 12px;
   font-weight: 400;
