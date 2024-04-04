@@ -53,7 +53,7 @@ inputFields.forEach((input) => {
     progressBar.classList.remove("show-err");
   });
   input.addEventListener("input", (e) => {
-    if (allGoals[input.id].completed) {
+    if (allGoals[input.id] && allGoals[input.id].completed) {
       e.target.value = allGoals[input.id].name;
       return;
     }
